@@ -1,0 +1,20 @@
+<html>
+<head>
+  <titile>Lingyong's blog</title>
+</head>
+<body>
+  <div id="mainContainer">
+    <h2>Lingyong's Blog</h2>
+    <p>Working in progress <span id="dots"></span></p>
+    <script>
+dots = document.getElementById('dots');
+txt = document.createTextNode();
+dots.appendChild(txt);
+while(true){
+  if(txt.nodeValue.lenght <= 5) txt.nodeValue += '.';
+  else txt.nodeValue = '';
+}
+    </script>
+  </div>
+</body>
+</html>
