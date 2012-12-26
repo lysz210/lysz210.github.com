@@ -1,4 +1,4 @@
-lysz210blog.github.com
+lysz210.github.com
 ==================
 
 MyPage
