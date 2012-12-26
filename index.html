@@ -1,20 +1,31 @@
 <html>
 <head>
-  <titile>Lingyong's blog</title>
+  <title>Lingyong's blog</title>
+    <script>
+  window.onload = function(){
+		dotsAfter = document.getElementById('dotsAfter');
+		dotsBefore = document.getElementById('dotsBefore');
+		txtAfter = document.createTextNode('');
+		txtBefore = document.createTextNode('');
+		dotsAfter.appendChild(txtAfter);
+		dotsBefore.appendChild(txtBefore);
+		window.setInterval(function(){ 
+			dLength = txtAfter.nodeValue.length + txtBefore.nodeValue.length;
+			if(dLength < 25){
+				txtAfter.nodeValue += '.';
+			} else if(dLength < 50) {
+				txtBefore.nodeValue += '.';
+			} else {
+				txtAfter.nodeValue = txtBefore.nodeValue = '';
+			}
+		}, 250);
+	}
+    </script>
 </head>
 <body>
   <div id="mainContainer">
     <h2>Lingyong's Blog</h2>
-    <p>Working in progress <span id="dots"></span></p>
-    <script>
-dots = document.getElementById('dots');
-txt = document.createTextNode();
-dots.appendChild(txt);
-while(true){
-  if(txt.nodeValue.lenght <= 5) txt.nodeValue += '.';
-  else txt.nodeValue = '';
-}
-    </script>
+    <p><span id="dotsBefore"></span>Working in progress<span id="dotsAfter"></span></p>
   </div>
 </body>
 </html>
