@@ -1,3 +1,4 @@
+<!--
 <html>
 <head>
   <title>Lingyong's blog</title>
@@ -28,4 +29,13 @@
     <p><span id="dotsBefore"></span>Working in progress<span id="dotsAfter"></span></p>
   </div>
 </body>
+</html>
+-->
+<html>
+ <head>
+  <title>Test PHP</title>
+ </head>
+ <body>
+ <?php echo "Hello World!<p>"; ?>
+ </body>
 </html>
